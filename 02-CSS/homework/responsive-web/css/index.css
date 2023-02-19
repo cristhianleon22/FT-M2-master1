@@ -160,6 +160,39 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+h2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: #F6F6F6;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding-bottom: 10px;
+}
+nav ul {
+  padding-top: 10px;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul a {
+  font-size: 15px;
+  color: #454A59;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  nav ul {
+    width: 80%;
+  }
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -176,6 +209,11 @@ footer {
 .home .intro p {
   padding: 0 15px;
 }
+.home .intro img {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 20px;
+}
 .home .music-images {
   display: flex;
   flex-wrap: wrap;
@@ -186,6 +224,15 @@ footer {
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+}
+@media (max-width: 500px) {
+  .home .music-images .ondas,
+  .home .music-images .tecnologia {
+    display: none;
+  }
+  .home .music-images .auricular {
+    width: 100%;
+  }
 }
 .home .musica-nueva {
   padding: 15px;
@@ -203,6 +250,15 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .actual {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+}
 .home .actual .actual-text {
   width: 50%;
 }
@@ -212,6 +268,28 @@ footer {
 .home .actual .actual-text p {
   margin-bottom: 26px;
 }
+.home .actual .actual-text .btn {
+  font-size: 20px;
+  font-weight: 300;
+  background-color: #22283A;
+  color: white;
+  border-radius: 20px;
+  border-color: white;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+.home .actual .actual-text .btn:hover {
+  background-color: white;
+  color: #22283A;
+  border: 1px solid black;
+}
+@media (max-width: 500px) {
+  .home .actual .actual-text .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
 .home .actual .actual-img {
   width: 46%;
   margin-left: 4%;
@@ -220,4 +298,10 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .actual .actual-img {
+    width: 100%;
+    padding: 10px;
+  }
 }

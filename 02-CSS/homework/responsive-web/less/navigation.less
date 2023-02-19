@@ -1,1 +1,34 @@
 // Código de Nav acá
+@import "variables.less";
+@import "mixins.less";
+
+h2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: @nav-bg;
+}
+
+nav {
+  .flex(column, center , center);
+  background-color: @nav-bg;
+  padding-bottom: 10px;
+  ul {
+    padding-top: 10px;
+    width:40%;
+    .flex(row, space-around, center);
+    a{
+      font-size: 15px;
+      color: @nav-font;
+      text-decoration: none;
+      
+    }
+    @media @phone {
+      width: 80%;
+      
+      
+    }
+  }
+  
+}
