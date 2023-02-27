@@ -4,7 +4,9 @@ var traverseDomAndCollectElements = function(matchFunc, startEl) {
   if (typeof startEl === "undefined") {
     startEl = document.body;
   }
+ 
 
+  
   // recorre el árbol del DOM y recolecta elementos que matchien en resultSet
   // usa matchFunc para identificar elementos que matchien
   if(matchFunc(startEl)){
