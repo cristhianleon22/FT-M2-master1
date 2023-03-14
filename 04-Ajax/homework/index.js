@@ -1,14 +1,14 @@
 const myBtn = $("#boton");
 const list = $("#lista");
-
-myBtn.click(function (params) {
+const refresh = function (params) {
     list.empty()
     $.get("http://localhost:5000/amigos", (response) => {
         response.forEach((element) => {
             list.append(`<li>${element.id}: ${element.name} </li>`);
         });
     });
-});
+}
+myBtn.click(refresh);
 
 //get id
 
@@ -36,6 +36,7 @@ $("#delete").click(() => {
             success:()=>{
                 
                 $("#success").text("borrado con exito");
+                refresh();
             },
         })
     }
